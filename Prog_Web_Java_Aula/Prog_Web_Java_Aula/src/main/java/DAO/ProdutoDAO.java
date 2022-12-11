@@ -1,11 +1,13 @@
 package DAO;
+
 import java.util.ArrayList;
 import java.util.List;
-import VO.Produto;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
+
+import VO.Produto;
+
 public class ProdutoDAO extends BaseDAO {
 	
 	public ProdutoDAO() {
@@ -91,6 +93,7 @@ public class ProdutoDAO extends BaseDAO {
 		fechar();
 		return lst;
 	}
+	
 	public Produto findByIdProduto(int id) throws Exception{
 		super.abrir();
 		

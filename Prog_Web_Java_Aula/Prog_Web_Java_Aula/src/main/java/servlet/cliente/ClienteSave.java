@@ -55,14 +55,15 @@ public class ClienteSave extends HttpServlet {
 	        }else {
 	        	ret="Cliente Alterado com Sucesso";
 	            c.setId(Integer.parseInt(id));
-	            dao.edit(c);
+	            dao.editCliente(c);
 	        }
-			ret+="<a href='ProdutoList'>Voltar</a>";
+			ret+="<a href='Home.jsp'>Voltar</a>";
 		} catch (Exception e){
 			ret="Erro na Inclusão<br>";
 			ret += e.getMessage() + "<br>";
-			ret+="<a href='ProdutoList'>Voltar</a>";
-		}		
+			ret+="<a href='Home.jsp'>Voltar</a>";
+		}	
+		response.getWriter().append(ret);
 	}
 
 }

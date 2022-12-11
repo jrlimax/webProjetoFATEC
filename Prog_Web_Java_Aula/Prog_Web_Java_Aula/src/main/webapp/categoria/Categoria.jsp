@@ -7,6 +7,6 @@
 <title>Cadastro de Categoria</title>
 </head>
 <body>
-<h1>POLIANA O BUMBUM MAIS GOSTOSO DO MUNDO, AMO MUITO.</h1>
+<h1>POLIANA, TE AMO <3</h1>
 </body>
 </html>
