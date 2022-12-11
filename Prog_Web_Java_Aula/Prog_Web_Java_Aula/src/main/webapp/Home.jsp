@@ -4,10 +4,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Index</title>
 </head>
 <body>
 <h1>Meus Acessos</h1>
-<a href="ProdutoList">Produtos</a>
+<a href="Cadastro">Categoria</a><br>
+<a href="ProdutoList">Produtos</a><br>
+<a href="ClienteNew">Clientes</a><br>
+<a href="VendaNew">Vendas</a><br>
+<a href="VendaList">Entregas</a><br>
 </body>
 </html>
