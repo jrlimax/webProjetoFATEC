@@ -37,17 +37,22 @@ public class ClienteSave extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Cliente c = new Cliente();
+		
 		String id = request.getParameter("id");		 
 		String nome = request.getParameter("nome");
 		String email = request.getParameter("email");
 		String endereco = request.getParameter("endereco");
 		Integer telefone = Integer.parseInt(request.getParameter("telefone"));
+		
 		c.setNome(nome);
 		c.setEmail(email);
 		c.setEndereco(endereco);
 		c.setTelefone(telefone);
+		
 		ClienteDAO dao = new ClienteDAO();
+		
 		String ret;
+		
 		try {
 		    if(id=="" || id==null) {
 			    ret="Cliente Incluído com Sucesso";

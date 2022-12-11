@@ -7,18 +7,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import DAO.ClienteDAO;
-import VO.Cliente;
 
 /**
- * Servlet implementation class ClienteEdit
+ * Servlet implementation class ClienteFind
  */
-public class ClienteEdit extends HttpServlet {
+public class ClienteFind extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ClienteEdit() {
+    public ClienteFind() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,27 +27,23 @@ public class ClienteEdit extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		try {
-			int id = Integer.parseInt(request.getParameter("id"));
-			Cliente vo = new Cliente();
-			
-			ClienteDAO dao = new ClienteDAO(vo);
-			vo= dao.findByIdCliente(id);
-			
-			request.setAttribute("cliente", vo);
-request.getRequestDispatcher("/cliente/Cliente.jsp").forward(request, response);
-		}catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		try {
+			String nome = request.getParameter("nome");
+			ClienteDAO dao = new ClienteDAO();
+			request.setAttribute("lista", dao.findCliente(nome));
+			
+			}catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+	request.getRequestDispatcher("/cliente/ClienteList.jsp").forward(request, response);
 	}
 
 }

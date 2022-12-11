@@ -142,6 +142,12 @@
   	<description></description>
   	<servlet-class>servlet.categoria.CategoriaSave</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ClienteFind</servlet-name>
+  	<display-name>ClienteFind</display-name>
+  	<description></description>
+  	<servlet-class>servlet.cliente.ClienteFind</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Index</servlet-name>
   	<url-pattern>/Index</url-pattern>
@@ -229,6 +235,10 @@
   <servlet-mapping>
   	<servlet-name>CategoriaSave</servlet-name>
   	<url-pattern>/CategoriaSave</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ClienteFind</servlet-name>
+  	<url-pattern>/ClienteFind</url-pattern>
   </servlet-mapping>
   
 </web-app>
