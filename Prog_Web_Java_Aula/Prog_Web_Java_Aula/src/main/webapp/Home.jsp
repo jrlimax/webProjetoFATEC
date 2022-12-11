@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Meus Acessos</h1>
-<a href="Cadastro">Categoria</a><br>
+<a href="CategoriaNew">Categoria</a><br>
 <a href="ProdutoList">Produtos</a><br>
 <a href="ClienteNew">Clientes</a><br>
 <a href="VendaNew">Vendas</a><br>

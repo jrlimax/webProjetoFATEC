@@ -9,7 +9,7 @@
 </head>
 <body>
 <form id="formulario01" action="ProdutoSave" method="post">
-<input type="text" id="codigo" name="codigo" 
+<input type="hidden" id="codigo" name="codigo" 
 		value="<c:out value="${produto.codigo}"/>" /> 
 		
 <table>
