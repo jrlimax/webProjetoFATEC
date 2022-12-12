@@ -1,4 +1,4 @@
-package servlet.cliente;
+package servlet.entrega;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,20 +6,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.ClienteDAO;
-import VO.Cliente;
-
+import DAO.EntregaDAO;
+import VO.Entrega;
 
 /**
- * Servlet implementation class ClienteSave
+ * Servlet implementation class EntregaSave
  */
-public class ClienteSave extends HttpServlet {
+public class EntregaSave extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ClienteSave() {
+    public EntregaSave() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,39 +35,36 @@ public class ClienteSave extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Cliente c = new Cliente();
+		// TODO Auto-generated method stub
+		Entrega e = new Entrega();
 
 		String id = request.getParameter("id");
-		String nome = request.getParameter("nome");
-		String email = request.getParameter("email");
-		String endereco = request.getParameter("endereco");
-		Integer telefone = Integer.parseInt(request.getParameter("telefone"));
+		String venda = request.getParameter("venda");
+		Integer data = Integer.parseInt(request.getParameter("data"));
+		
+		e.setVenda(venda);
+		e.setData(data);
 
-		c.setNome(nome);
-		c.setEmail(email);
-		c.setEndereco(endereco);
-		c.setTelefone(telefone);
-
-		ClienteDAO dao = new ClienteDAO();
+		EntregaDAO dao = new EntregaDAO();
 
 		String ret;
 
 		try {
 			if (id == "" || id == null) {
-				ret = "Cliente Incluído com Sucesso";
-				dao.newCliente(c);
+				ret = "Entrega Incluído com Sucesso";
+				dao.newEntrega(e);
 			} else {
 				ret = "Cliente Alterado com Sucesso";
-				c.setId(Integer.parseInt(id));
-				dao.editCliente(c);
+				e.setId(Integer.parseInt(id));
+				dao.editEntrega(e);
 			}
 			ret += "<a href='Home.jsp'>Voltar</a>";
-		} catch (Exception e) {
+		} catch (Exception ex) {
 			ret = "Erro na Inclusão<br>";
-			ret += e.getMessage() + "<br>";
+			ret += ex.getMessage() + "<br>";
 			ret += "<a href='Home.jsp'>Voltar</a>";
 		}
 		response.getWriter().append(ret);
 	}
-
+	
 }

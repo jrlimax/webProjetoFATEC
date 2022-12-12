@@ -154,6 +154,36 @@
   	<description></description>
   	<servlet-class>servlet.entrega.EntregaList</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>EntregaDelete</servlet-name>
+  	<display-name>EntregaDelete</display-name>
+  	<description></description>
+  	<servlet-class>servlet.entrega.EntregaDelete</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EntregaEdit</servlet-name>
+  	<display-name>EntregaEdit</display-name>
+  	<description></description>
+  	<servlet-class>servlet.entrega.EntregaEdit</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EntregaFind</servlet-name>
+  	<display-name>EntregaFind</display-name>
+  	<description></description>
+  	<servlet-class>servlet.entrega.EntregaFind</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EntregaNew</servlet-name>
+  	<display-name>EntregaNew</display-name>
+  	<description></description>
+  	<servlet-class>servlet.entrega.EntregaNew</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EntregaSave</servlet-name>
+  	<display-name>EntregaSave</display-name>
+  	<description></description>
+  	<servlet-class>servlet.entrega.EntregaSave</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Index</servlet-name>
   	<url-pattern>/Index</url-pattern>
@@ -249,6 +279,26 @@
   <servlet-mapping>
   	<servlet-name>EntregaList</servlet-name>
   	<url-pattern>/EntregaList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EntregaDelete</servlet-name>
+  	<url-pattern>/EntregaDelete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EntregaEdit</servlet-name>
+  	<url-pattern>/EntregaEdit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EntregaFind</servlet-name>
+  	<url-pattern>/EntregaFind</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EntregaNew</servlet-name>
+  	<url-pattern>/EntregaNew</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EntregaSave</servlet-name>
+  	<url-pattern>/EntregaSave</url-pattern>
   </servlet-mapping>
   
 </web-app>
