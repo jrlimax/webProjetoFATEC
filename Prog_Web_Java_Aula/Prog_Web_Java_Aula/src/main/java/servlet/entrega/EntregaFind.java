@@ -36,9 +36,9 @@ public class EntregaFind extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
-			String venda = request.getParameter("venda");
+			String entrega = request.getParameter("venda");
 			EntregaDAO dao = new EntregaDAO();
-			request.setAttribute("lista", dao.findEntrega(venda));
+			request.setAttribute("lista", dao.findEntrega(entrega));
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

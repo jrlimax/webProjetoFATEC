@@ -40,10 +40,8 @@ public class EntregaSave extends HttpServlet {
 
 		String id = request.getParameter("id");
 		String venda = request.getParameter("venda");
-		Integer data = Integer.parseInt(request.getParameter("data"));
 		
 		e.setVenda(venda);
-		e.setData(data);
 
 		EntregaDAO dao = new EntregaDAO();
 
@@ -54,7 +52,7 @@ public class EntregaSave extends HttpServlet {
 				ret = "Entrega Incluído com Sucesso";
 				dao.newEntrega(e);
 			} else {
-				ret = "Cliente Alterado com Sucesso";
+				ret = "Entrega Alterado com Sucesso";
 				e.setId(Integer.parseInt(id));
 				dao.editEntrega(e);
 			}

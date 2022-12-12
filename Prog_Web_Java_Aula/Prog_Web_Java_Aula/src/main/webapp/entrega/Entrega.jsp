@@ -1,40 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jstl/core"  prefix="c" %>  
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Entregas:</title>
+<title>Cadastro de Entregas</title>
 </head>
 <body>
+<h1>Cadastro de Entregas:</h1>
 
-	<h1>Entregas a realizar:</h1>
+<form id="formulario01" action="EntregaSave" method="post">
 
-	<form action="">
+<input type="hidden" id="id" name="id" 
+		value="<c:out value="${entrega.id}"/>" /> 
+	
+	<div>
+		<label>Entrega:</label>
+		<input type="text" placeholder="Cadastro da entrega" id="venda" name="venda" 
+		value="<c:out value="${entrega.venda}"/>" /> 
+	</div>
 
-		<div>
-			<label>C�digo da entrega:</label> <input type="number"
-				placeholder="codEntrega">
-		</div>
+	<div>
+		<input type="submit" value="Cadastrar">
+	<button>
+		<a href="Index">Voltar</a>
+	</button>
+	</div>
+	
+</form>
 
-
-		<div>
-			<label>C�digo da venda:</label> <input type="number"
-				placeholder="codVenda">
-		</div>
-
-
-		<div>
-			<label>Data de Recebimento:</label> <input type="date"
-				placeholder="dd/mm/aaaa">
-		</div>
-
-		<div>
-			<button>
-				<a href="Index">Voltar</a>
-			</button>
-		</div>
-
-	</form>
 </body>
 </html>

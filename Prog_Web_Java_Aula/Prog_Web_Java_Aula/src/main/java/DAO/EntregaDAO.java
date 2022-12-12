@@ -71,11 +71,10 @@ public class EntregaDAO extends BaseDAO {
 	public void editEntrega(Entrega e) throws Exception {
 
 		abrir();
-		String query = " update entrega set venda=?, data=? where id=?";
+		String query = " update entrega set venda=?, where id=?";
 		PreparedStatement preparedStmt = getConn().prepareStatement(query);
 		preparedStmt.setString(1, e.getVenda());
-		preparedStmt.setInt(3, e.getData());
-		preparedStmt.setInt(5, e.getId());
+		preparedStmt.setInt(2, e.getId());
 		preparedStmt.execute();
 		fechar();
 	}
