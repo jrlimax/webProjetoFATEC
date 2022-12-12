@@ -8,9 +8,9 @@
 </head>
 <body>
 <h1>Meus Acessos</h1>
-<a href="CategoriaNew">Categoria</a><br>
-<a href="ProdutoList">Produtos</a><br>
 <a href="ClienteList">Clientes</a><br>
+<a href="ProdutoList">Produtos</a><br>
+<a href="CategoriaList">Categoria</a><br>
 <a href="VendaNew">Vendas</a><br>
 <a href="VendaList">Entregas</a><br>
 </body>

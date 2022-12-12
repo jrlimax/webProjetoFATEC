@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import DAO.CategoriaDAO;
+
 /**
  * Servlet implementation class CategoriaList
  */
@@ -25,8 +27,14 @@ public class CategoriaList extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+		try {
+			CategoriaDAO dao = new CategoriaDAO();
+				request.setAttribute("lista", dao.getCategoria());
+			}catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			request.getRequestDispatcher("/categoria/CategoriaList.jsp").forward(request, response);
+		}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
