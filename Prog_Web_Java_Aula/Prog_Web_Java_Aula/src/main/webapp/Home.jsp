@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +7,35 @@
 <title>Index</title>
 </head>
 <body>
-<h1>Meus Acessos</h1>
-<a href="ClienteList">Clientes</a><br>
-<a href="ProdutoList">Produtos</a><br>
-<a href="CategoriaList">Categoria</a><br>
-<a href="VendaNew">Vendas</a><br>
-<a href="VendaList">Entregas</a><br>
+	<h1>Acessos:</h1>
+
+	<div>
+		<a href="ClienteList">Clientes</a>
+	</div>
+
+	<br>
+
+	<div>
+		<a href="ProdutoList">Produtos</a>
+	</div>
+
+	<br>
+
+	<div>
+		<a href="CategoriaList">Categoria</a>
+	</div>
+
+	<br>
+
+	<div>
+		<a href="VendaList">Vendas</a>
+	</div>
+
+	<br>
+
+	<div>
+		<a href="EntregaList">Entregas</a>
+	</div>
+
 </body>
 </html>
