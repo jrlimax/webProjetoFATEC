@@ -23,6 +23,7 @@
 		<th>Codigo</th>
 		<th>Nome</th>
 		<th>Descrição</th>
+		<th>Preço</th>
 		
 	</tr>
 	<c:forEach var="item" items="${lista}" >
@@ -30,6 +31,7 @@
 			<td><c:out value="${item.codigo}" /> </td>
 			<td><c:out value="${item.nome}"/></td>
 			<td><c:out value="${item.descricao}"/></td>
+			<td><c:out value="${item.preco}"/></td>
 			<td><a href="ProdutoDelete?id=<c:out value="${item.codigo}" />">Deletar</a></td>
 			<td><a href="ProdutoEdit?id=<c:out value="${item.codigo}" />">Editar</a></td>
 		</tr>
